@@ -1,14 +1,22 @@
 import React from 'react';
-import {ReactMotionLoop} from '../..';
+import {spring, presets} from 'react-motion';
+import {Pulse} from './Pulse';
+import {Loop} from './Loop';
+
+
 import css from './App.css';
 
 
-const App = () => (
+export const App = () => (
   <div className={css.app}>
     <h1>react-motion-loop</h1>
-    <ReactMotionLoop />
+    <div className={css.container}>
+      <h2>Pulse</h2>
+      <Pulse />
+    </div>
+    <div className={css.container}>
+      <h2>Loop</h2>
+      <Loop />
+    </div>
   </div>
 );
-
-
-export default App;
