@@ -14,10 +14,10 @@ React component-wrapper to swap one element with another and back, useful to sho
 
 ### NPM
 ```sh
-npm install --save react react-motion-loop
+npm install --save react react-motion react-motion-loop
 ```
 
-Don't forget to manually install peer dependencies (`react`) if you use npm@3.
+Don't forget to manually install peer dependencies (`react`, `react-motion`) if you use npm@3.
 
 
 ### Bower:
@@ -48,11 +48,25 @@ bower install --save https://npmcdn.com/react-motion-loop/bower.zip
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {spring} from 'react-motion';
 import {ReactMotionLoop} from 'react-motion-loop';
+
 
 const App = () => (
   <div>
-    <ReactMotionLoop />
+    <h1>Looping animation</h1>
+    <ReactMotionLoop
+      styleFrom={{width: spring(0), height: spring(0)}}
+      styleTo={{width: spring(100), height: spring(100)}}>
+      {style => <div style={style} />}
+    </ReactMotionLoop>
+
+    <h1>Pulsing animation</h1>
+    <ReactMotionLoop
+      styleFrom={{width: 0, height: 0}} // Instantly jump to the initial style
+      styleTo={{width: spring(100), height: spring(100)}}>
+      {style => <div style={style} />}
+    </ReactMotionLoop>
   </div>
 );
 
@@ -63,9 +77,27 @@ ReactDOM.render(<App />, appRoot);
 
 ## Options
 
+#### `styleFrom`: PropTypes.object.isRequired
+
+Initial style for animated element, used for ReactMotion's `defaultStyle` and as returning animation
+
+
+#### `styleTo`: PropTypes.object.isRequired
+
+Element is animated to this style, used for ReactMotion's `style`
+
+
+#### All arbitrary props will be transferred to `<Motion>` as is
+
+WARN: passing `onRest`, `style` or `defaultStyle` will override looping behavior, since internally `Motion` is used like:
 ```js
-// TODO
+<Motion
+  defaultStyle={defaultStyle}
+  onRest={this.onRest}
+  style={style}
+  {...props} />
 ```
+
 
 ## Development and testing
 
