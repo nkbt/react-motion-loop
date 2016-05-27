@@ -1,0 +1,1 @@
+export {ReactMotionLoop} from './Component';
