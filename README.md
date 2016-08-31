@@ -22,14 +22,14 @@ Don't forget to manually install peer dependencies (`react`, `react-motion`) if 
 
 ### Bower:
 ```sh
-bower install --save https://npmcdn.com/react-motion-loop/bower.zip
+bower install --save https://unpkg.com/react-motion-loop/bower.zip
 ```
 
 
 ### 1998 Script Tag:
 ```html
-<script src="https://npmcdn.com/react/dist/react.js"></script>
-<script src="https://npmcdn.com/react-motion-loop/build/react-motion-loop.js"></script>
+<script src="https://unpkg.com/react/dist/react.js"></script>
+<script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.js"></script>
 (Module exposed as `ReactMotionLoop`)
 ```
 
