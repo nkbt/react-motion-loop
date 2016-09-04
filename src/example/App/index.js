@@ -1,5 +1,4 @@
 import React from 'react';
-import {spring, presets} from 'react-motion';
 import {Pulse} from './Pulse';
 import {Loop} from './Loop';
 
@@ -7,7 +6,7 @@ import {Loop} from './Loop';
 import css from './App.css';
 
 
-export const App = () => (
+export const App = () =>
   <div className={css.app}>
     <h1>react-motion-loop</h1>
     <div className={css.container}>
@@ -19,4 +18,4 @@ export const App = () => (
       <Loop />
     </div>
   </div>
-);
+;

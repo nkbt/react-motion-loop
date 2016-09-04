@@ -16,10 +16,10 @@ const styleTo = {
 };
 
 
-export const Loop = () => (
+export const Loop = () =>
   <ReactMotionLoop
     styleFrom={styleFrom}
     styleTo={styleTo}>
     {style => <div className={css.element} style={style} />}
   </ReactMotionLoop>
-);
+;

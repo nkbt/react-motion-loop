@@ -7,7 +7,7 @@
     "component": "ReactMotionLoop"
   },
   "scripts": {
-    "start": "p-s --config react-component-template/package-scripts -s",
+    "start": "react-component-template",
     "test": "npm start test",
     "precommit": "npm start precommit",
     "prepush": "npm start prepush",
@@ -34,8 +34,7 @@
     "react-motion": "^0.4"
   },
   "devDependencies": {
-    "p-s": "0.9.0",
-    "react-component-template": "0.1.2",
-    "react-motion": "0.4.3"
+    "react-component-template": "0.1.6",
+    "react-motion": "0.4.4"
   }
 }
