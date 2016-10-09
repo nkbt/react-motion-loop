@@ -34,7 +34,7 @@
     "react-motion": "^0.4"
   },
   "devDependencies": {
-    "react-component-template": "0.1.6",
+    "react-component-template": "0.1.7",
     "react-motion": "0.4.5"
   }
 }
