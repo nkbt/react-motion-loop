@@ -40,9 +40,7 @@ bower install --save https://unpkg.com/react-motion-loop/bower.zip
 
 ## Codepen demo
 
-```js
-// TODO
-```
+[http://codepen.io/stringpiggy/pen/JbpvLJ](http://codepen.io/stringpiggy/pen/JbpvLJ)
 
 ## Usage
 ```js
