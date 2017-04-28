@@ -31,7 +31,7 @@
   "homepage": "https://github.com/nkbt/react-motion-loop",
   "peerDependencies": {
     "react": "^0.14 || ^15",
-    "react-motion": "^0.4"
+    "react-motion": "^0.4 || ^0.5"
   },
   "devDependencies": {
     "react-component-template": "0.1.10",
