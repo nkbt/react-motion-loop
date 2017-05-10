@@ -1,5 +1,6 @@
 import React from 'react';
 import {Motion} from 'react-motion';
+import PropTypes from 'prop-types';
 
 export class ReactMotionLoop extends React.Component {
   constructor(props) {
@@ -41,6 +42,6 @@ export class ReactMotionLoop extends React.Component {
 }
 
 ReactMotionLoop.propTypes = {
-  styleFrom: React.PropTypes.object.isRequired,
-  styleTo: React.PropTypes.object.isRequired
+  styleFrom: PropTypes.object.isRequired,
+  styleTo: PropTypes.object.isRequired
 };
