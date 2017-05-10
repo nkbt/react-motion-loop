@@ -1,26 +1,24 @@
 import React from 'react';
 import {Motion} from 'react-motion';
 
+export class ReactMotionLoop extends React.Component {
+  constructor(props) {
+    super(props);
 
-export const ReactMotionLoop = React.createClass({
-  propTypes: {
-    styleFrom: React.PropTypes.object.isRequired,
-    styleTo: React.PropTypes.object.isRequired
-  },
+    this.onRest = this.onRest.bind(this);
 
-  getInitialState() {
-    return {flag: true};
-  },
+    this.state = {flag: true};
+  }
 
 
   componentWillUnmount() {
     cancelAnimationFrame(this.raf);
-  },
+  }
 
 
   onRest() {
     this.raf = requestAnimationFrame(() => this.setState({flag: !this.state.flag}));
-  },
+  }
 
 
   render() {
@@ -40,6 +38,9 @@ export const ReactMotionLoop = React.createClass({
         {...props} />
     );
   }
-});
+}
 
-
+ReactMotionLoop.propTypes = {
+  styleFrom: React.PropTypes.object.isRequired,
+  styleTo: React.PropTypes.object.isRequired
+};
