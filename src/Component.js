@@ -1,26 +1,23 @@
 import React from 'react';
-import {Motion} from 'react-motion';
 import PropTypes from 'prop-types';
+import {Motion} from 'react-motion';
+
 
 export class ReactMotionLoop extends React.Component {
-  constructor(props) {
-    super(props);
+  static propTypes = {
+    styleFrom: PropTypes.object.isRequired,
+    styleTo: PropTypes.object.isRequired
+  };
 
-    this.onRest = this.onRest.bind(this);
-
-    this.state = {flag: true};
-  }
-
+  state = {flag: true};
 
   componentWillUnmount() {
     cancelAnimationFrame(this.raf);
   }
 
-
-  onRest() {
+  onRest = () => {
     this.raf = requestAnimationFrame(() => this.setState({flag: !this.state.flag}));
-  }
-
+  };
 
   render() {
     const {styleFrom, styleTo, ...props} = this.props;
@@ -40,8 +37,3 @@ export class ReactMotionLoop extends React.Component {
     );
   }
 }
-
-ReactMotionLoop.propTypes = {
-  styleFrom: PropTypes.object.isRequired,
-  styleTo: PropTypes.object.isRequired
-};

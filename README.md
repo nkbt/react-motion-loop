@@ -1,14 +1,15 @@
 # react-motion-loop [![npm](https://img.shields.io/npm/v/react-motion-loop.svg?style=flat-square)](https://www.npmjs.com/package/react-motion-loop)
 
+Looping animation for react-motion Spring
+
+
 [![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
 
-[![CircleCI](https://img.shields.io/circleci/project/nkbt/react-motion-loop.svg?style=flat-square&label=nix-build)](https://circleci.com/gh/nkbt/react-motion-loop)
-[![AppVeyor](https://img.shields.io/appveyor/ci/nkbt/react-motion-loop.svg?style=flat-square&label=win-build)](https://ci.appveyor.com/project/nkbt/react-motion-loop)
+[![Build](https://img.shields.io/circleci/project/nkbt/react-motion-loop.svg?style=flat-square)](https://circleci.com/gh/nkbt/react-motion-loop)
 [![Coverage](https://img.shields.io/codecov/c/github/nkbt/react-motion-loop.svg?style=flat-square)](https://codecov.io/github/nkbt/react-motion-loop?branch=master)
 [![Dependencies](https://img.shields.io/david/nkbt/react-motion-loop.svg?style=flat-square)](https://david-dm.org/nkbt/react-motion-loop)
 [![Dev Dependencies](https://img.shields.io/david/dev/nkbt/react-motion-loop.svg?style=flat-square)](https://david-dm.org/nkbt/react-motion-loop#info=devDependencies)
 
-React component-wrapper to swap one element with another and back, useful to show/hide popups, expand/collapse elements, various toggles, etc.
 
 ## Installation
 
@@ -20,16 +21,11 @@ npm install --save react react-motion react-motion-loop
 Don't forget to manually install peer dependencies (`react`, `react-motion`) if you use npm@3.
 
 
-### Bower:
-```sh
-bower install --save https://unpkg.com/react-motion-loop/bower.zip
-```
-
-
 ### 1998 Script Tag:
 ```html
-<script src="https://unpkg.com/react/dist/react.js"></script>
-<script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.js"></script>
+<script src="https://unpkg.com/react/dist/react.min.js"></script>
+<script src="https://unpkg.com/react-motion/build/react-motion.js"></script>
+<script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.min.js"></script>
 (Module exposed as `ReactMotionLoop`)
 ```
 
@@ -40,7 +36,7 @@ bower install --save https://unpkg.com/react-motion-loop/bower.zip
 
 ## Codepen demo
 
-[http://codepen.io/stringpiggy/pen/JbpvLJ](http://codepen.io/stringpiggy/pen/JbpvLJ)
+[https://codepen.io/nkbt/pen/ybqmWw](https://codepen.io/nkbt/pen/ybqmWw)
 
 ## Usage
 ```js
@@ -99,7 +95,7 @@ WARN: passing `onRest`, `style` or `defaultStyle` will override looping behavior
 
 ## Development and testing
 
-Currently is being developed and tested with the latest stable `Node 6` on `OSX` and `Windows`.
+Currently is being developed and tested with the latest stable `Node 7` on `OSX`
 
 To run example covering all `ReactMotionLoop` features, use `npm start dev`, which will compile `src/example/Example.js`
 
