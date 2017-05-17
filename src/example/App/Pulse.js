@@ -1,7 +1,6 @@
 import React from 'react';
 import {spring, presets} from 'react-motion';
 import {ReactMotionLoop} from '../..';
-import css from './App.css';
 
 
 const styleFrom = {
@@ -20,5 +19,5 @@ export const Pulse = () =>
   <ReactMotionLoop
     styleFrom={styleFrom}
     styleTo={styleTo}>
-    {style => <div className={css.element} style={style} />}
+    {style => <div className="element" style={style} />}
   </ReactMotionLoop>;

@@ -30,11 +30,13 @@
   },
   "homepage": "https://github.com/nkbt/react-motion-loop",
   "peerDependencies": {
-    "prop-types": "15.5.9",
-    "react": "^0.14 || ^15",
-    "react-motion": "^0.5"
+    "react": "^15.3.0",
+    "react-motion": "^0.5.0"
   },
   "devDependencies": {
+    "eslint-plugin-babel": "4.1.1",
+    "extract-text-webpack-plugin": "2.1.0",
+    "html-webpack-include-assets-plugin": "0.0.5",
     "react-component-template": "0.1.10",
     "react-motion": "0.5.0"
   }

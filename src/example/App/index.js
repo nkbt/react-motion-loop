@@ -3,17 +3,14 @@ import {Pulse} from './Pulse';
 import {Loop} from './Loop';
 
 
-import css from './App.css';
-
-
 export const App = () =>
-  <div className={css.app}>
+  <div className="app">
     <h1>react-motion-loop</h1>
-    <div className={css.container}>
+    <div className="container">
       <h2>Pulse</h2>
       <Pulse />
     </div>
-    <div className={css.container}>
+    <div className="container">
       <h2>Loop</h2>
       <Loop />
     </div>

@@ -1,13 +1,12 @@
 machine:
   node:
-    version: v6.4.0
+    version: 7
 
 test:
   override:
-    - npm start ci.lint
-    - npm start ci.test
-    - npm start ci.cov
-    - npm start ci.e2e
+    - npm start -s ci.lint
+    - npm start -s ci.cov
+    - npm start -s ci.e2e
 
   post:
-    - npm start ci.codecov
+    - npm start -s ci.codecov
