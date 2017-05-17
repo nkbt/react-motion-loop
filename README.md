@@ -36,7 +36,7 @@ Don't forget to manually install peer dependencies (`react`, `react-motion`) if 
 
 ## Codepen demo
 
-[http://codepen.io/stringpiggy/pen/JbpvLJ](http://codepen.io/stringpiggy/pen/JbpvLJ)
+[https://codepen.io/nkbt/pen/ybqmWw](https://codepen.io/nkbt/pen/ybqmWw)
 
 ## Usage
 ```js
