@@ -1,6 +1,7 @@
 # react-motion-loop [![npm](https://img.shields.io/npm/v/react-motion-loop.svg?style=flat-square)](https://www.npmjs.com/package/react-motion-loop)
 
-React component-wrapper to swap one element with another and back, useful to show/hide popups, expand/collapse elements, various toggles, etc.
+Looping animation for react-motion Spring
+
 
 [![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
 
@@ -23,6 +24,7 @@ Don't forget to manually install peer dependencies (`react`, `react-motion`) if 
 ### 1998 Script Tag:
 ```html
 <script src="https://unpkg.com/react/dist/react.min.js"></script>
+<script src="https://unpkg.com/react-motion/build/react-motion.js"></script>
 <script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.min.js"></script>
 (Module exposed as `ReactMotionLoop`)
 ```
