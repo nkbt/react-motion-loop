@@ -39,5 +39,8 @@
     "html-webpack-include-assets-plugin": "0.0.5",
     "react-component-template": "0.1.10",
     "react-motion": "0.5.0"
+  },
+  "dependencies": {
+    "prop-types": "15.5.10"
   }
 }
