@@ -1,1 +1,4 @@
-export {ReactMotionLoop} from './Component';
+const {ReactMotionLoop} = require('./Component');
+
+ReactMotionLoop.ReactMotionLoop = ReactMotionLoop;
+module.exports = ReactMotionLoop;
