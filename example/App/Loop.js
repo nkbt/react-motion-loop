@@ -1,6 +1,6 @@
 import React from 'react';
 import {spring} from 'react-motion';
-import {ReactMotionLoop} from '../..';
+import {ReactMotionLoop} from '../../src';
 
 
 export const Loop = () => (
