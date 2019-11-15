@@ -5,7 +5,9 @@ import {Motion} from 'react-motion';
 
 export class ReactMotionLoop extends React.Component {
   static propTypes = {
+    // eslint-disable-next-line react/forbid-prop-types
     styleFrom: PropTypes.object.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     styleTo: PropTypes.object.isRequired
   };
 
@@ -16,7 +18,7 @@ export class ReactMotionLoop extends React.Component {
   }
 
   onRest = () => {
-    this.raf = requestAnimationFrame(() => this.setState({flag: !this.state.flag}));
+    this.raf = requestAnimationFrame(() => this.setState(({flag}) => ({flag: !flag})));
   };
 
   render() {
