@@ -4,15 +4,36 @@
   "description": "Looping animation for react-motion Spring",
   "main": "lib/index.js",
   "config": {
-    "component": "ReactMotionLoop"
+    "component": "ReactMotionLoop",
+    "externals": {
+      "react": "React",
+      "react-dom": "ReactDOM",
+      "react-motion": "ReactMotion"
+    },
+    "include": [
+      "https://unpkg.com/react/umd/react.production.min.js",
+      "https://unpkg.com/react-dom/umd/react-dom.production.min.js",
+      "https://unpkg.com/react-motion/build/react-motion.js"
+    ]
   },
   "scripts": {
-    "start": "react-component-template",
-    "test": "npm start test",
-    "precommit": "npm start precommit",
-    "prepush": "npm start prepush",
-    "postversion": "npm start postversion",
-    "prepublish": "npm start prepublish"
+    "build": "yarn lib && yarn dist",
+    "start": "NODE_ENV=development webpack-dev-server --config ./webpack/dev.config.js",
+    "predist": "rm -rf ./build",
+    "dist": "NODE_ENV=production webpack-cli --config ./webpack/dist.config.js && NODE_ENV=production webpack-cli --config ./webpack/min.config.js",
+    "preghPages": "yarn pub",
+    "ghPages": "gh-pages --dist ./pub --repo git@github.com:nkbt/react-motion-loop.git --user nik@butenko.me --branch gh-pages --message 'Publish examples' ",
+    "prelib": "rm -rf ./lib",
+    "lib": "NODE_ENV=production babel src --out-dir lib",
+    "lint": "eslint .",
+    "prepub": "rm -rf ./pub",
+    "pub": "NODE_ENV=production webpack-cli --config ./webpack/pub.config.js",
+    "test": "node test/Component-test.js",
+    "prepublishOnly": "yarn build",
+    "postversion": "git push --follow-tags",
+    "nuke": "rm -rf node_modules yarn.lock",
+    "postnuke": "yarn install",
+    "deps": "! depcheck --specials=bin,eslint --ignore-dirs=build,lib,pub | grep --invert-match 'No depcheck issue'"
   },
   "repository": {
     "type": "git",
@@ -21,7 +42,9 @@
   "keywords": [
     "component",
     "react-component",
-    "react"
+    "react",
+    "react-motion",
+    "loop-animation"
   ],
   "author": "Nik Butenko <nik@butenko.me>",
   "license": "MIT",
@@ -33,14 +56,48 @@
     "react": "^15.3.0",
     "react-motion": "^0.5.0"
   },
-  "devDependencies": {
-    "eslint-plugin-babel": "4.1.2",
-    "extract-text-webpack-plugin": "3.0.0",
-    "html-webpack-include-assets-plugin": "1.0.1",
-    "react-component-template": "0.1.10",
-    "react-motion": "0.5.2"
-  },
   "dependencies": {
     "prop-types": "^15"
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "css-loader": "^3.2.0",
+    "depcheck": "^0.9.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "mini-css-extract-plugin": "^0.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-motion": "^0.5.2",
+    "style-loader": "^1.0.0",
+    "tape": "^4.11.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "files": [
+    "build",
+    "lib",
+    "src",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
 }

@@ -1,42 +1,43 @@
 # react-motion-loop [![npm](https://img.shields.io/npm/v/react-motion-loop.svg?style=flat-square)](https://www.npmjs.com/package/react-motion-loop)
 
-Looping animation for react-motion Spring
-
-
-[![Gitter](https://img.shields.io/gitter/room/nkbt/help.svg?style=flat-square)](https://gitter.im/nkbt/help)
-
-[![Build](https://img.shields.io/circleci/project/nkbt/react-motion-loop.svg?style=flat-square)](https://circleci.com/gh/nkbt/react-motion-loop)
-[![Coverage](https://img.shields.io/codecov/c/github/nkbt/react-motion-loop.svg?style=flat-square)](https://codecov.io/github/nkbt/react-motion-loop?branch=master)
+[![CircleCI](https://img.shields.io/circleci/project/nkbt/react-motion-loop.svg?style=flat-square&label=build)](https://circleci.com/gh/nkbt/react-motion-loop)
 [![Dependencies](https://img.shields.io/david/nkbt/react-motion-loop.svg?style=flat-square)](https://david-dm.org/nkbt/react-motion-loop)
 [![Dev Dependencies](https://img.shields.io/david/dev/nkbt/react-motion-loop.svg?style=flat-square)](https://david-dm.org/nkbt/react-motion-loop#info=devDependencies)
 
+Looping animation for react-motion Spring
 
-## Installation
-
-### NPM
-```sh
-npm install --save react react-motion react-motion-loop
-```
-
-Don't forget to manually install peer dependencies (`react`, `react-motion`) if you use npm@3.
-
-
-### 1998 Script Tag:
-```html
-<script src="https://unpkg.com/react/dist/react.min.js"></script>
-<script src="https://unpkg.com/react-motion/build/react-motion.js"></script>
-<script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.min.js"></script>
-(Module exposed as `ReactMotionLoop`)
-```
-
+![React Height](./example/react-height.gif)
 
 ## Demo
 
-[http://nkbt.github.io/react-motion-loop](http://nkbt.github.io/react-motion-loop)
+[https://nkbt.github.io/react-motion-loop](https://nkbt.github.io/react-motion-loop)
 
 ## Codepen demo
 
 [https://codepen.io/nkbt/pen/ybqmWw](https://codepen.io/nkbt/pen/ybqmWw)
+
+## Installation
+
+### NPM
+
+```sh
+npm install --save react-motion-loop
+```
+
+### yarn
+
+```sh
+yarn add react-motion-loop 
+```
+
+### 1998 Script Tag:
+```html
+<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-motion/build/react-motion.js"></script>
+<script src="https://unpkg.com/react-motion-loop/build/react-motion-loop.js"></script>
+(Module exposed as `ReactMotionLoop`)
+```
+
 
 ## Usage
 ```js
@@ -95,15 +96,15 @@ WARN: passing `onRest`, `style` or `defaultStyle` will override looping behavior
 
 ## Development and testing
 
-Currently is being developed and tested with the latest stable `Node 7` on `OSX`
+Currently is being developed and tested with the latest stable `Node` on `OSX`.
 
-To run example covering all `ReactMotionLoop` features, use `npm start dev`, which will compile `src/example/Example.js`
+To run example covering all `ReactMotionLoop` features, use `yarn start`, which will compile `example/index.js`
 
 ```bash
 git clone git@github.com:nkbt/react-motion-loop.git
 cd react-motion-loop
-npm install
-npm start dev
+yarn install
+yarn start
 
 # then
 open http://localhost:8080
@@ -112,14 +113,11 @@ open http://localhost:8080
 ## Tests
 
 ```bash
+# to run ESLint check
+yarn lint
+
 # to run tests
-npm start test
-
-# to generate test coverage (./reports/coverage)
-npm start test.cov
-
-# to run end-to-end tests
-npm start test.e2e
+yarn test
 ```
 
 ## License
