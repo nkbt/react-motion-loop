@@ -6,7 +6,7 @@
 
 Looping animation for react-motion Spring
 
-![React Height](./example/react-height.gif)
+![ReactMotionLoop](./example/react-motion-loop.gif)
 
 ## Demo
 
