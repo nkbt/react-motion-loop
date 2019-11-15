@@ -3,7 +3,7 @@ import {Pulse} from './Pulse';
 import {Loop} from './Loop';
 
 
-export const App = () =>
+export const App = () => (
   <div className="app">
     <h1>react-motion-loop</h1>
     <div className="container">
@@ -15,4 +15,4 @@ export const App = () =>
       <Loop />
     </div>
   </div>
-;
+);

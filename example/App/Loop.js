@@ -3,7 +3,7 @@ import {spring} from 'react-motion';
 import {ReactMotionLoop} from '../..';
 
 
-export const Loop = () =>
+export const Loop = () => (
   <ReactMotionLoop
     styleFrom={{
       width: spring(0),
@@ -16,4 +16,5 @@ export const Loop = () =>
       borderRadius: spring(50)
     }}>
     {style => <div className="element" style={style} />}
-  </ReactMotionLoop>;
+  </ReactMotionLoop>
+);

@@ -3,7 +3,7 @@ import {spring, presets} from 'react-motion';
 import {ReactMotionLoop} from '../..';
 
 
-export const Pulse = () =>
+export const Pulse = () => (
   <ReactMotionLoop
     styleFrom={{
       width: 0,
@@ -16,4 +16,5 @@ export const Pulse = () =>
       borderRadius: spring(50, presets.stiff)
     }}>
     {style => <div className="element" style={style} />}
-  </ReactMotionLoop>;
+  </ReactMotionLoop>
+);
